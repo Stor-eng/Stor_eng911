@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تسجيل الدخول | قطوف</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+
+    <div id="authNavArea"></div>
+
+    <div class="logo-box">
+        ❖ قَــطُــوف ❖
+    </div>
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+</header>
+
+<div class="top-buttons" id="topButtons">
+    <button onclick="location.href='index.html'">الرئيسية</button>
+    <button onclick="location.href='saved.html'">المحفوظ</button>
+    <button>تواصل معنا</button>
+    <button id="loginBtnStatic" onclick="location.href='login.html'">تسجيل الدخول</button>
+</div>
+
+<div class="auth-page">
+  <form class="auth-card" onsubmit="handleLogin(event)">
+    <h2>تسجيل الدخول</h2>
+
+    <input type="email" id="loginEmail" placeholder="الإيميل">
+    <input type="password" id="loginPassword" placeholder="كلمة السر">
+
+    <p class="auth-error" id="loginError"></p>
+
+    <button type="submit" class="auth-submit-btn">دخول</button>
+
+    <p class="auth-switch"><a href="#" onclick="openForgotModal();return false;">نسيت كلمة السر؟</a></p>
+    <p class="auth-switch">لسه معملتش حساب؟ <a href="signup.html">إنشاء حساب جديد</a></p>
+  </form>
+</div>
+
+<!-- ===== نافذة نسيت كلمة السر ===== -->
+<div class="modal-overlay" id="forgotModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeForgotModal()">✕</button>
+    <h3>نسيت كلمة السر</h3>
+    <p style="font-weight:normal;font-size:14px;">اكتب إيميلك وهنبعتلك لينك تقدر تغيّر بيه كلمة السر</p>
+    <form onsubmit="handleForgotPassword(event)">
+      <input class="edit-input" type="email" id="forgotEmail" placeholder="الإيميل">
+      <p class="auth-error" id="forgotMsg"></p>
+      <button type="submit" class="auth-submit-btn">إرسال لينك إعادة التعيين</button>
+    </form>
+  </div>
+</div>
+
+<!-- ===== نافذة تعديل بيانات الحساب ===== -->
+<div class="modal-overlay" id="editModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeEditModal()">✕</button>
+    <h3>تعديل البيانات</h3>
+    <form onsubmit="handleEditSave(event)">
+      <input class="edit-input" type="text" id="editName" placeholder="الاسم">
+      <input class="edit-input" type="email" id="editEmail" placeholder="الإيميل">
+      <input class="edit-input" type="password" id="editPassword" placeholder="كلمة سر جديدة (اختياري)">
+      <input class="edit-input" type="password" id="editCurrentPassword" placeholder="كلمة السر الحالية (لو هتغيّر الإيميل أو كلمة السر)">
+      <p class="auth-error" id="editError"></p>
+      <button type="submit" class="auth-submit-btn">حفظ التعديلات</button>
+    </form>
+  </div>
+</div>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>
