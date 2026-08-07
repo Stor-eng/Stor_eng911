@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>قطوف | بيع مباشر</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+
+    <div id="authNavArea"></div>
+
+    <div class="logo-box">
+        ❖ قَــطُــوف ❖
+    </div>
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+</header>
+
+<div class="top-buttons" id="topButtons">
+    <button onclick="location.href='index.html'">الرئيسية</button>
+    <button onclick="location.href='saved.html'">المحفوظ</button>
+   
+    <button id="loginBtnStatic" onclick="openAuthModal()">تسجيل الدخول</button>
+</div>
+            
+<div class="filters">
+  <button onclick="filterProducts('all')">📦 الكل</button>
+  <button onclick="filterProducts('dress')">👗 دريسات</button>
+  <button onclick="filterProducts('pants')">👖 بناطيل</button>
+  <button onclick="filterProducts('set')">🧥 طقم كامل</button>
+</div>
+
+<section class="products">
+
+<!-- ===== دريسات ===== -->
+<div class="product dress" data-details="وصف دريس قطوف 1: قماش عالي الجودة، مناسب لجميع الفصول.">
+  <img src="img/tshirt1.jpg">
+  <h3>👗 دريس قطوف 1</h3>
+  <p>🆔 الكود: QT-DR-001</p>
+  <select id="s1"><option>Oversized</option><option>Slim</option></select>
+  <button class="save-btn" onclick="toggleSave(this)">🤍</button>
+  <button class="order-btn" onclick="order('QT-DR-001','👗 دريس قطوف 1','s1')">اطلب الآن</button>
+  <button class="details-btn" onclick="showDetails(this)">التفاصيل</button>
+</div>
+
+<div class="product dress" data-details="وصف دريس قطوف 2: قماش عالي الجودة، مناسب لجميع الفصول.">
+  <img src="img/tshirt2.jpg">
+  <h3>👗 دريس قطوف 2</h3>
+  <p>🆔 الكود: QT-DR-002</p>
+  <select id="s2"><option>Oversized</option><option>Slim</option></select>
+  <button class="save-btn" onclick="toggleSave(this)">🤍</button>
+  <button class="order-btn" onclick="order('QT-DR-002','👗 دريس قطوف 2','s2')">اطلب الآن</button>
+  <button class="details-btn" onclick="showDetails(this)">التفاصيل</button>
+</div>
+
+<div class="product dress" data-details="وصف دريس قطوف 3: قماش عالي الجودة، مناسب لجميع الفصول.">
+  <img src="img/tshirt3.jpg">
+  <h3>👗 دريس قطوف 3</h3>
+  <p>🆔 الكود: QT-DR-003</p>
+  <select id="s3"><option>Oversized</option><option>Slim</option></select>
+  <button class="save-btn" onclick="toggleSave(this)">🤍</button>
+  <button class="order-btn" onclick="order('QT-DR-003','👗 دريس قطوف 3','s3')">اطلب الآن</button>
+  <button class="details-btn" onclick="showDetails(this)">التفاصيل</button>
+</div>
+
+<div class="product dress" data-details="وصف دريس قطوف 4: قماش عالي الجودة، مناسب لجميع الفصول.">
+  <img src="img/tshirt4.jpg">
+  <h3>👗 دريس قطوف 4</h3>
+  <p>🆔 الكود: QT-DR-004</p>
+  <select id="s4"><option>Oversized</option><option>Slim</option></select>
+  <button class="save-btn" onclick="toggleSave(this)">🤍</button>
+  <button class="order-btn" onclick="order('QT-DR-004','👗 دريس قطوف 4','s4')">اطلب الآن</button>
+  <button class="details-btn" onclick="showDetails(this)">التفاصيل</button>
+</div>
+
+<div class="product dress" data-details="وصف دريس قطوف 5: قماش عالي الجودة، مناسب لجميع الفصول.">
+  <img src="img/tshirt5.jpg">
+  <h3>👗 دريس قطوف 5</h3>
+  <p>🆔 الكود: QT-DR-005</p>
+  <select id="s5"><option>Oversized</option><option>Slim</option></select>
+  <button class="save-btn" onclick="toggleSave(this)">🤍</button>
+  <button class="order-btn" onclick="order('QT-DR-005','👗 دريس قطوف 5','s5')">اطلب الآن</button>
+  <button class="details-btn" onclick="showDetails(this)">التفاصيل</button>
+</div>
+
+<div class="product dress" data-details="وصف دريس قطوف 6: قماش عالي الجودة، مناسب لجميع الفصول.">
+  <img src="img/tshirt6.jpg">
+  <h3>👗 دريس قطوف 6</h3>
+  <p>🆔 الكود: QT-DR-006</p>
+  <select id="s6"><option>Oversized</option><option>Slim</option></select>
+  <button class="save-btn" onclick="toggleSave(this)">🤍</button>
+  <button class="order-btn" onclick="order('QT-DR-006','👗 دريس قطوف 6','s6')">اطلب الآن</button>
+  <button class="details-btn" onclick="showDetails(this)">التفاصيل</button>
+</div>
+
+<div class="product dress" data-details="وصف دريس قطوف 7: قماش عالي الجودة، مناسب لجميع الفصول.">
+  <img src="img/tshirt4.jpg">
+  <h3>👗 دريس قطوف 7</h3>
+  <p>🆔 الكود: QT-DR-007</p>
+  <select id="s7"><option>Oversized</option><option>Slim</option></select>
+  <button class="save-btn" onclick="toggleSave(this)">🤍</button>
+  <button class="order-btn" onclick="order('QT-DR-007','👗 دريس قطوف 7','s7')">اطلب الآن</button>
+  <button class="details-btn" onclick="showDetails(this)">التفاصيل</button>
+</div>
+
+<!-- ===== بناطيل ===== -->
+<div class="product pants" data-details="وصف بنطلون قطوف 1: خامة مريحة وقصة عصرية.">
+  <img src="img/pants1.jpg">
+  <h3>👖 بنطلون قطوف 1</h3>
+  <p>🆔 الكود: QT-PN-010</p>
+  <select id="s8"><option>Oversized</option><option>Slim</option></select>
+  <button class="save-btn" onclick="toggleSave(this)">🤍</button>
+  <button class="order-btn" onclick="order('QT-PN-010','👖 بنطلون قطوف 1','s8')">اطلب الآن</button>
+  <button class="details-btn" onclick="showDetails(this)">التفاصيل</button>
+</div>
+
+<div class="product pants" data-details="وصف بنطلون قطوف 2: خامة مريحة وقصة عصرية.">
+  <img src="img/pants2.jpg">
+  <h3>👖 بنطلون قطوف 2</h3>
+  <p>🆔 الكود: QT-PN-011</p>
+  <select id="s9"><option>Oversized</option><option>Slim</option></select>
+  <button class="save-btn" onclick="toggleSave(this)">🤍</button>
+  <button class="order-btn" onclick="order('QT-PN-011','👖 بنطلون قطوف 2','s9')">اطلب الآن</button>
+  <button class="details-btn" onclick="showDetails(this)">التفاصيل</button>
+</div>
+
+<div class="product pants" data-details="وصف بنطلون قطوف 3: خامة مريحة وقصة عصرية.">
+  <img src="img/pants3.jpg">
+  <h3>👖 بنطلون قطوف 3</h3>
+  <p>🆔 الكود: QT-PN-012</p>
+  <select id="s10"><option>Oversized</option><option>Slim</option></select>
+  <button class="save-btn" onclick="toggleSave(this)">🤍</button>
+  <button class="order-btn" onclick="order('QT-PN-012','👖 بنطلون قطوف 3','s10')">اطلب الآن</button>
+  <button class="details-btn" onclick="showDetails(this)">التفاصيل</button>
+</div>
+
+<div class="product pants" data-details="وصف بنطلون قطوف 4: خامة مريحة وقصة عصرية.">
+  <img src="img/pants4.jpg">
+  <h3>👖 بنطلون قطوف 4</h3>
+  <p>🆔 الكود: QT-PN-013</p>
+  <select id="s11"><option>Oversized</option><option>Slim</option></select>
+  <button class="save-btn" onclick="toggleSave(this)">🤍</button>
+  <button class="order-btn" onclick="order('QT-PN-013','👖 بنطلون قطوف 4','s11')">اطلب الآن</button>
+  <button class="details-btn" onclick="showDetails(this)">التفاصيل</button>
+</div>
+
+<div class="product pants" data-details="وصف بنطلون قطوف 5: خامة مريحة وقصة عصرية.">
+  <img src="img/pants5.jpg">
+  <h3>👖 بنطلون قطوف 5</h3>
+  <p>🆔 الكود: QT-PN-014</p>
+  <select id="s12"><option>Oversized</option><option>Slim</option></select>
+  <button class="save-btn" onclick="toggleSave(this)">🤍</button>
+  <button class="order-btn" onclick="order('QT-PN-014','👖 بنطلون قطوف 5','s12')">اطلب الآن</button>
+  <button class="details-btn" onclick="showDetails(this)">التفاصيل</button>
+</div>
+
+<!-- ===== أطقم ===== -->
+<div class="product set" data-details="وصف طقم قطوف 1: تشكيلة متكاملة بخامات مختارة بعناية.">
+  <img src="img/set1.jpg">
+  <h3>🧥 طقم قطوف 1</h3>
+  <p>🆔 الكود: QT-ST-100</p>
+  <select id="s13"><option>Oversized</option><option>Slim</option></select>
+  <button class="save-btn" onclick="toggleSave(this)">🤍</button>
+  <button class="order-btn" onclick="order('QT-ST-100','🧥 طقم قطوف 1','s13')">اطلب الآن</button>
+  <button class="details-btn" onclick="showDetails(this)">التفاصيل</button>
+</div>
+
+</section>
+
+<footer>© 2025 قطوف - Qotoof</footer>
+
+<a class="whatsapp" href="https://wa.me/201145587547" target="_blank">💬 تواصل معي </a>
+
+<!-- ===== نافذة التفاصيل ===== -->
+<div class="modal-overlay" id="detailsModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeDetails()">✕</button>
+    <img id="modalImg" src="" alt="">
+    <h3 id="modalTitle"></h3>
+    <p id="modalCode"></p>
+    <p id="modalDesc"></p>
+  </div>
+</div>
+
+<!-- ===== نافذة تسجيل الدخول / إنشاء حساب ===== -->
+<div class="modal-overlay" id="authModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeAuthModal()">✕</button>
+    <h3>مرحبًا بيك في قطوف</h3>
+    <p>سجّل دخولك أو اعمل حساب جديد</p>
+    <button class="auth-option-btn" onclick="location.href='login.html'">تسجيل الدخول</button>
+    <button class="auth-option-btn secondary" onclick="location.href='signup.html'">إنشاء حساب جديد</button>
+  </div>
+</div>
+
+<!-- ===== نافذة تعديل بيانات الحساب ===== -->
+<div class="modal-overlay" id="editModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeEditModal()">✕</button>
+    <h3>تعديل البيانات</h3>
+    <form onsubmit="handleEditSave(event)">
+      <input class="edit-input" type="text" id="editName" placeholder="الاسم">
+      <input class="edit-input" type="email" id="editEmail" placeholder="الإيميل">
+      <input class="edit-input" type="password" id="editPassword" placeholder="كلمة سر جديدة (اختياري)">
+      <input class="edit-input" type="password" id="editCurrentPassword" placeholder="كلمة السر الحالية (لو هتغيّر الإيميل أو كلمة السر)">
+      <p class="auth-error" id="editError"></p>
+      <button type="submit" class="auth-submit-btn">حفظ التعديلات</button>
+    </form>
+  </div>
+</div>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>
