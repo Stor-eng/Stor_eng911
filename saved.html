@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>المحفوظ | قطوف</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+
+    <div id="authNavArea"></div>
+
+    <div class="logo-box">
+        ❖ قَــطُــوف ❖
+    </div>
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+</header>
+
+<div class="top-buttons" id="topButtons">
+    <button onclick="location.href='index.html'">الرئيسية</button>
+    <button onclick="location.href='saved.html'">المحفوظ</button>
+    <button>تواصل معنا</button>
+    <button id="loginBtnStatic" onclick="openAuthModal()">تسجيل الدخول</button>
+</div>
+
+<div class="filters">
+  <button onclick="filterProducts('all')">📦 الكل</button>
+  <button onclick="filterProducts('dress')">👗 دريسات</button>
+  <button onclick="filterProducts('pants')">👖 بناطيل</button>
+  <button onclick="filterProducts('set')">🧥 طقم كامل</button>
+</div>
+
+<section class="products">
+  <div id="savedContent" style="width:100%;text-align:center;font-weight:bold;padding:30px;">
+  </div>
+</section>
+
+<!-- ===== نافذة تسجيل الدخول / إنشاء حساب ===== -->
+<div class="modal-overlay" id="authModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeAuthModal()">✕</button>
+    <h3>مرحبًا بيك في قطوف</h3>
+    <p>سجّل دخولك أو اعمل حساب جديد</p>
+    <button class="auth-option-btn" onclick="location.href='login.html'">تسجيل الدخول</button>
+    <button class="auth-option-btn secondary" onclick="location.href='signup.html'">إنشاء حساب جديد</button>
+  </div>
+</div>
+
+<!-- ===== نافذة تعديل بيانات الحساب ===== -->
+<div class="modal-overlay" id="editModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeEditModal()">✕</button>
+    <h3>تعديل البيانات</h3>
+    <form onsubmit="handleEditSave(event)">
+      <input class="edit-input" type="text" id="editName" placeholder="الاسم">
+      <input class="edit-input" type="email" id="editEmail" placeholder="الإيميل">
+      <input class="edit-input" type="password" id="editPassword" placeholder="كلمة سر جديدة (اختياري)">
+      <input class="edit-input" type="password" id="editCurrentPassword" placeholder="كلمة السر الحالية (لو هتغيّر الإيميل أو كلمة السر)">
+      <p class="auth-error" id="editError"></p>
+      <button type="submit" class="auth-submit-btn">حفظ التعديلات</button>
+    </form>
+  </div>
+</div>
+
+<script type="module" src="script.js"></script>
+
+</body>
+</html>
